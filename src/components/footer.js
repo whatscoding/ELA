@@ -13,7 +13,7 @@ const Footer = () => {
     `)
     return (
         <footer>
-            {data.site.siteMetadata.author}, {data.site.siteMetadata.year}
+            {data.site.siteMetadata.author} © {data.site.siteMetadata.year}
         </footer>
     )
 }
