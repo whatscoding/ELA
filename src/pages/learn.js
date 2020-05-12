@@ -1,13 +1,41 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Layout from '../components/layout'
 
 
 const LearnPage = () =>  {
+    const data = useStaticQuery(graphql`
+        query {
+            allMarkdownRemark {
+                edges {
+                    node {
+                        frontmatter {
+                            title
+                            date
+                        }
+                    }
+                }
+            }
+        }
+    `)
+
+console.log(data)
     return (
         <Layout>
-            <h1>Learn</h1>
-            <p>Learning deep dives will come here</p>
+           <ol>
+               {data.allMarkdownRemark.edges.map((edge) => {
+                   return (
+                       <li>
+                           <h2>
+                                {edge.node.frontmatter.title}
+                           </h2>
+                           <p>
+                                {edge.node.frontmatter.date}
+                           </p>
+                       </li>
+                   )
+               })}
+           </ol>
         </Layout>
     )
 }
