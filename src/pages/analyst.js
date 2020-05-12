@@ -3,13 +3,13 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 
 
-const BlogPage = () =>  {
+const AnalystPage = () =>  {
     return (
         <Layout>
-            <h1>Blog</h1>
-            <p>Blog posts will come here</p>
+            <h1>Analyst</h1>
+            <p>Analyst deep dives will come here</p>
         </Layout>
     )
 }
 
-export default BlogPage
+export default AnalystPage

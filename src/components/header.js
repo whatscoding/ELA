@@ -16,7 +16,7 @@ const Header = () => {
                         <Link className={headerStyles.navItem} to="/">Home</Link>
                     </li>
                     <li>    
-                        <Link className={headerStyles.navItem} to="/blog">Blog</Link>
+                        <Link className={headerStyles.navItem} to="/analyst">Analyst</Link>
                     </li>
                     <li>
                         <Link className={headerStyles.navItem} to="/about">About</Link>
